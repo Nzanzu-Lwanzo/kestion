@@ -23,6 +23,13 @@ img {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -43,21 +50,34 @@ body {
   background-color: var(--slate);
   width: 100%;
   height: 50vh;
+  background: url("../imgs/to_blog_or_not_to_blog.jpg") no-repeat center/cover;
 }
 
-.layout__header {
+body:has(.post__section) .container {
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+}
+
+.hero .container {
+  height: 100%;
+  width: 100%;
+}
+
+.container .layout__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: var(--layout-header);
   width: 100%;
   position: sticky;
   top: 0;
   background-color: transparent;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
   color: var(--black);
   padding: 1rem;
+
+  /* background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); */
 }
 
 .layout__header a {
@@ -77,12 +97,23 @@ body {
 }
 
 .layout__header .text__btn {
-  padding: 0.7rem 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 2px;
   background-color: var(--black);
   display: inline-block;
-  color: var(--slate);
+  color: var(--white);
   border: 1px solid var(--black);
   transition: 0.15s ease-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.6rem;
+}
+
+.layout__header .text__btn:hover svg {
+  fill: #000;
 }
 
 .layout__header .text__btn:hover {

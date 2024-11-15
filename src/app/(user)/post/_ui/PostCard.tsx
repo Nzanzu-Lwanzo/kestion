@@ -1,6 +1,7 @@
 import UserProfile from "@/app/_ui/UserProfile";
 import { formatDate } from "@/libs/formatters";
 import Link from "next/link";
+import placeholderImage from "@/assets/imgs/girl.jpg";
 
 const PostCard = () => {
   return (
@@ -9,7 +10,7 @@ const PostCard = () => {
         <UserProfile />
       </div>
       <div className="post__image">
-        <img src="/girl.jpg" alt="Image" />
+        <img src={placeholderImage.src} alt="Image" />
       </div>
       <div className="details">
         <span className="title">Lorem Ipsum Dolor Sit Amet</span>
@@ -21,7 +22,7 @@ const PostCard = () => {
         </p>
         <span className="date">{formatDate(new Date())}</span>
         <div className="read__post">
-          <Link href="/">Read</Link>
+          <Link href="/post/hello-world/12">Read</Link>
         </div>
       </div>
     </div>
