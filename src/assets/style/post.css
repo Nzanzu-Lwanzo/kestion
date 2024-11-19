@@ -3,11 +3,13 @@
   width: 60%;
   margin: auto;
   padding: 2rem;
+  position: relative;
 }
 
 .post__section > * {
   margin-bottom: 1rem;
 }
+
 
 .post__section h1 {
   font-size: 2.5rem;
@@ -16,7 +18,7 @@
 
 .post__section p {
   font-size: 1rem;
-  line-height: 1.4rem;
+  line-height: 1.6rem;
   font-family: var(--font-geist-sans) !important;
 }
 
@@ -35,20 +37,20 @@
 }
 
 .post__section .actions .action {
-    height: 35px;
-    width: 35px;
-    background-color: var(--white);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: .1s ease-out;
-    text-decoration: none;
-    color: var(--black);
+  height: 35px;
+  width: 35px;
+  background-color: var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+  text-decoration: none;
+  color: var(--black);
 }
 
 .post__section .actions .action:hover {
-    background-color: var(--black);
+  background-color: var(--black);
 }
 
 .post__section .actions .action:hover svg {
-    fill: #FFF;
+  fill: #fff;
 }

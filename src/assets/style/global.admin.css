@@ -1,51 +1,3 @@
-:root {
-  --yellow: #fecd45;
-  --blue: #2568fb;
-  --black: #000000;
-  --white: #f7f7f7;
-  --slate: #7da2a9;
-  --layout-header: 60px;
-}
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.shadow {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-}
-
-.shadow:hover {
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  border: none;
-  outline: none;
-  font-family: var(--font-geist-mono), system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-    "Open Sans", "Helvetica Neue", sans-serif;
-  box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-  width: 100%;
-}
-
 main {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -96,4 +48,93 @@ main > * {
   overflow-y: auto;
   overflow-x: hidden;
   padding: 2rem;
+}
+
+/* LIST POSTS PAGE COMPONENT */
+
+.list__posts__page {
+  width: 100%;
+  height: 100%;
+}
+
+.list__posts__page .posts__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+/* NEW POST PAGE COMPONENT */
+
+.new__post__page {
+  width: 60%;
+  margin: auto;
+}
+
+#post__form {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.wrap__input {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+
+  flex-direction: column;
+}
+
+.wrap__input label {
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+input:not(input[type="checkbox"]),
+input:not(input[type="file"]),
+input:not(input[type="radio"]),
+input:not(input[type="file"]),
+textarea {
+  width: 100%;
+  border: 2px solid var(--black);
+  padding: 0.5rem;
+  border-radius: 2px;
+  font-size: 0.8rem;
+}
+
+textarea {
+  min-height: 200px;
+  resize: none;
+}
+
+#post__form .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+#post__form .buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  border: 2px solid var(--black);
+  padding: 0.3rem 0.5rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+  border-radius: 2px;
+}
+
+#post__form .buttons button:hover {
+  background-color: var(--black);
+  color: #fff;
+}
+
+#post__form .buttons button:hover svg {
+  fill: #fff;
 }

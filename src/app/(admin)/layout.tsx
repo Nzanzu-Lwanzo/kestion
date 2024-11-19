@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "@/assets/style/global.css";
 import "@/assets/style/global.admin.css";
 import { geistMono, geistSans } from "@/assets/fonts/fontDefinitions";
 import Sidebar from "./_ui/Sidebar";

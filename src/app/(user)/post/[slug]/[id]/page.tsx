@@ -1,9 +1,12 @@
 import "@/assets/style/post.css";
 import PostCard from "../../_ui/PostCard";
+import PostAuthorCard from "../../_ui/PostAuthorCard";
 
 const Post = () => {
   return (
     <section className="post__section">
+      <PostAuthorCard />
+
       <h1>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia corrupti
         aut nemo dignissimos sunt ullam

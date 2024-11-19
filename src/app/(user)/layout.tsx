@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "@/assets/style/global.css";
 import "@/assets/style/global.user.css";
 import { geistMono, geistSans } from "@/assets/fonts/fontDefinitions";
 import Link from "next/link";
